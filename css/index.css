@@ -1,0 +1,91 @@
+	body {
+		background-image: url(../blackboard_bg.jpg);
+		background-size: cover;
+	  background-repeat:   no-repeat;
+    background-position: center center;
+	}
+	
+	@font-face {
+			font-family: "lwafont";
+			src: url("../fonts/lwafont.otf") format('opentype');
+	}
+	
+	@font-face {
+			font-family: "lwafontcustom";
+			src: url("../fonts/lwafontcustom.otf") format('opentype');
+	}
+	
+	h2.lwa {
+			font-family: "lwafont";
+		  color:white;
+			text-shadow: 0 0 15px #339966;
+	}
+	p.lwa {
+			font-family: "lwafont";
+			font-size: 35;
+			word-wrap: break-word;
+			color:white;
+			text-shadow: 0 0 15px #339966;
+			margin: 0cm 4cm 1cm 4cm;
+	}
+	
+	p.custom {
+			font-family: "lwafontcustom";
+			font-size: 35;
+			word-wrap: break-word;
+			color:white;
+			text-shadow: 0 0 15px #339966;
+			margin: 0cm 4cm 1cm 4cm;
+	}
+	
+	p.normal {
+			font-family: "Tahoma";
+			font-size: 25;
+			word-wrap: break-word;
+			color:white;
+			text-shadow: 0 0 15px #339966;
+			margin: 0cm 4cm 1cm 4cm;
+	}
+	
+	textarea.normal {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		resize:none;
+	}
+	
+	textarea.lwa {
+		font-family: "lwafontcustom";
+		font-size:20;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		resize:none;
+	}
+	
+	a:visited {
+			color:#339966;
+	}
+	
+	a:link {
+			color:#339966;
+	}
+	
+	div.imagegenerated {
+			width:auto;
+			height:auto;
+			margin: 0cm 0cm 0cm 0cm;
+	}
+	
+	form {
+		text-align:center;
+		text-shadow: 0 0 15px #339966;
+		color:white;
+	}
+	
+	footer
+	{
+		text-shadow: 0 0 15px #339966;
+		color:white;
+		text-align:center;
+	}

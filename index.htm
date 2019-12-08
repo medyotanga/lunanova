@@ -1,0 +1,59 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Little Witch Academia - Luna Alphabet Generator</title>
+	<link rel="icon" type="image/png" href="favico/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="favico/favicon-16x16.png" sizes="16x16" />	
+  	<link type="text/css" rel="stylesheet" href="css/index.css"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.3/FileSaver.min.js"></script>
+	<script>
+	function generate() {
+	  var user_string = document.getElementById('source').value;
+		user_string = user_string.replace(/(?:\r\n|\r|\n)/g, '<br />');
+		
+		if(document.getElementById('lwafont').checked) {
+			document.getElementById('source').className = "normal";
+			document.getElementById('result').className = "lwa";	
+		} else if (document.getElementById('lwafont_custom').checked)  {
+			document.getElementById('source').className = "normal";
+			document.getElementById('result').className = "custom";
+		} else {
+			document.getElementById('source').className = "lwa";
+			document.getElementById('result').className = "normal";
+		}
+			document.getElementById('result').innerHTML = user_string;
+	}
+	
+	function pngout() {
+		html2canvas(result, {
+			onrendered: function(canvas) {
+				canvas.toBlob(function(blob) {
+					saveAs(blob, "lunanova_ay.medyotan.ga.png");
+			});
+			}
+		});
+	}
+	</script>
+</head>
+<body>
+	<div class="header">
+		<img src="lunanova.png" align="center" style="width:15%;height:auto;margin:0px auto;display:block">
+		<h2 class="lwa" align="center">Luna Alphabet Generator</h2>
+	</div>
+	<form align="center">
+		<!-- this is bad i know -->
+		<textarea id="source" rows="5" cols="50" onchange="generate()" onkeyup="generate()"></textarea><br>
+		<input type="radio" name="choice" id="lwafont" value="No punctuation" checked="checked" onclick="generate()"/>No punctuation
+		<input type="radio" name="choice" id="lwafont_custom" value="Custom punctuation" onclick="generate()"/>Custom punctuation
+		<input type="radio" name="choice" id="lwafont_reverse" value="Custom punctuation" onclick="generate()"/>Reverse Generator
+		<input type="button" name="save" id="save" onclick="pngout()" value="PNGOUT"/>
+	</form>
+	<div id="imagegenerated"><br>
+		<p id="result" class="lwa"></p>
+	</div>
+	<footer align ="center"> 
+<a href="https://ay.medyotan.ga/upload/lwa_moonrunes.png">LWA Luna Alphabet Information</a><br>
+font by: <a href="https://fontstruct.com/fontstructions/show/1359073/lwa1-1">Nayas1</a> and some /a/nons on <a href="https://boards.4chan.org/a/thread/152396359#p152413854">/a/</a> | doesn't work? use <a href="old.htm">old</a> version. </footer>
+</body>
+</html>
